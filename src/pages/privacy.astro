@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const GITHUB = 'https://github.com/IldySilva/xell'
+const RELEASES = `${GITHUB}/releases`
+---
+
+<Layout
+  title="Privacy Policy — Xell"
+  description="Xell privacy policy. No data collection, no telemetry, everything stays on your device."
+>
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/50 bg-bg/90 backdrop-blur-sm">
+    <div class="max-w-4xl mx-auto px-6 h-13 flex items-center justify-between">
+      <a href="/" class="font-mono text-[14px] text-text hover:text-text/70 transition-colors">xell</a>
+      <div class="flex items-center gap-4">
+        <a href={GITHUB} target="_blank" rel="noopener" class="text-muted hover:text-text transition-colors" aria-label="GitHub">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+        <a href={RELEASES} target="_blank" rel="noopener" class="px-3 py-1.5 rounded-md bg-accent text-white text-[13px] font-medium hover:bg-accent/90 transition-colors">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+    <div class="max-w-2xl">
+      <p class="text-[12px] font-mono text-muted/50 mb-4">Last updated: June 2, 2026</p>
+      <h1 class="text-3xl sm:text-4xl font-semibold text-text tracking-tight mb-3">Privacy Policy</h1>
+      <p class="text-[15px] text-muted leading-relaxed mb-12">
+        Xell is an open-source SSH workspace for developers. This policy explains what data the app handles and how it is stored.
+      </p>
+
+      <div class="space-y-10">
+
+        <!-- No data collection -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Data We Collect</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[14px] text-text font-medium mb-1">Xell does not collect, transmit, or share any personal data.</p>
+            <p class="text-[13.5px] text-muted leading-relaxed">
+              All data stays on your device. There are no analytics, no telemetry, no tracking, and no cloud sync.
+            </p>
+          </div>
+        </section>
+
+        <!-- Local storage -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Data Stored on Your Device</h2>
+          </div>
+          <div class="pl-4 border-l border-border space-y-4">
+            <div>
+              <p class="text-[13px] font-mono text-muted/70 mb-2">Non-sensitive — Android SharedPreferences</p>
+              <ul class="space-y-1.5 text-[13.5px] text-muted">
+                <li class="flex items-start gap-2"><span class="text-muted/40 mt-0.5">–</span>SSH host configurations (name, hostname, port, username, tags)</li>
+                <li class="flex items-start gap-2"><span class="text-muted/40 mt-0.5">–</span>App settings (theme, terminal font size)</li>
+                <li class="flex items-start gap-2"><span class="text-muted/40 mt-0.5">–</span>Recent connections list</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-[13px] font-mono text-muted/70 mb-2">Sensitive — Android Keystore / encrypted storage</p>
+              <ul class="space-y-1.5 text-[13.5px] text-muted">
+                <li class="flex items-start gap-2"><span class="text-muted/40 mt-0.5">–</span>SSH passwords (encrypted, never leaves your device)</li>
+                <li class="flex items-start gap-2"><span class="text-muted/40 mt-0.5">–</span>SSH private key passphrases (encrypted, never leaves your device)</li>
+              </ul>
+            </div>
+            <p class="text-[13px] text-muted/60 italic">
+              Private key files are never copied or stored — only the file path you select is saved.
+            </p>
+          </div>
+        </section>
+
+        <!-- Network -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Network Access</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[13.5px] text-muted leading-relaxed">
+              The app connects only to SSH servers you explicitly configure. No other network connections are made.
+              The app does not communicate with any Xell or third-party servers.
+            </p>
+          </div>
+        </section>
+
+        <!-- Permissions -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Permissions</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <div class="bg-surface border border-border rounded-lg overflow-hidden">
+              <div class="grid grid-cols-[auto_1fr] divide-y divide-border">
+                <div class="px-4 py-2.5 bg-elevated text-[12px] font-mono text-muted/60">Permission</div>
+                <div class="px-4 py-2.5 bg-elevated text-[12px] font-mono text-muted/60">Reason</div>
+                <div class="px-4 py-3 font-mono text-[12.5px] text-accent">INTERNET</div>
+                <div class="px-4 py-3 text-[13px] text-muted">Required to establish SSH connections to your servers</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Data sharing -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Data Sharing</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[13.5px] text-muted leading-relaxed">
+              Xell does not share any data with third parties. Ever.
+            </p>
+          </div>
+        </section>
+
+        <!-- Data deletion -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Data Deletion</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[13.5px] text-muted leading-relaxed">
+              To delete all app data, use the "Clear local data" option in Settings, or uninstall the app.
+              Uninstalling removes all locally stored hosts, credentials, and preferences.
+            </p>
+          </div>
+        </section>
+
+        <!-- Children -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Children's Privacy</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[13.5px] text-muted leading-relaxed">
+              Xell is a developer tool not intended for use by children under 13.
+            </p>
+          </div>
+        </section>
+
+        <!-- Open source -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Open Source</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[13.5px] text-muted leading-relaxed mb-3">
+              Xell is open source. You can review the full source code to verify these claims.
+            </p>
+            <a href={GITHUB} target="_blank" rel="noopener" class="text-[13px] text-accent hover:underline">
+              View source on GitHub →
+            </a>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <h2 class="text-[16px] font-semibold text-text">Contact</h2>
+          </div>
+          <div class="pl-4 border-l border-border">
+            <p class="text-[13.5px] text-muted leading-relaxed">
+              If you have questions about this privacy policy, open an issue on the project's
+              <a href={GITHUB} target="_blank" rel="noopener" class="text-accent hover:underline">GitHub repository</a>.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-border mt-8">
+    <div class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+      <span class="font-mono text-[12px] text-muted/60">xell</span>
+      <div class="flex gap-5 text-[12px] text-muted">
+        <a href={GITHUB} target="_blank" rel="noopener" class="hover:text-text transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          GitHub
+        </a>
+        <a href={RELEASES} target="_blank" rel="noopener" class="hover:text-text transition-colors">Releases</a>
+        <a href="/privacy" class="text-text/80 hover:text-text transition-colors">Privacy</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
